@@ -1,0 +1,13 @@
+audiobooks/
+app_data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+node_modules/
+.DS_Store

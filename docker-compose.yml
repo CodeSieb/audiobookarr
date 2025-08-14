@@ -1,0 +1,17 @@
+services:
+  tokybook-downloader:
+    build: .
+    container_name: tokybook-downloader
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./audiobooks:/audiobooks
+      - ./app_data:/app/data
+    environment:
+      - AUDIOBOOKS_DIR=/audiobooks
+      - INITIAL_PASSWORD=changeme123
+    restart: unless-stopped
+
+volumes:
+  audiobooks:
+  app_data:
